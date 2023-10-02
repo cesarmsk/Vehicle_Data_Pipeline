@@ -1,0 +1,16 @@
+version: '3'
+services:
+  postgres:
+    build:
+      context: ./db
+    environment:
+      POSTGRES_DB: d2d
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin:abc
+    ports:
+      - "5432:5432"
+  lambda:
+    build:
+      context: ./lambda
+    environment:
+      BUCKET_NAME: s3-vehicles-bucket

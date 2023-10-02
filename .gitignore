@@ -1,0 +1,6 @@
+.terraform/
+.terraform/*
+lambda/*/
+/lambda/*/
+!/lambda/
+
