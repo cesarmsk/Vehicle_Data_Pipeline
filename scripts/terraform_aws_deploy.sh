@@ -18,8 +18,8 @@ cd terraform
 terraform init
 terraform validate
 SECRETS=./secret.tfvars
-terraform plan -var-file="${SECRETS}"
-#terraform apply -auto-approve
+#enable plan to preview changes before apply: terraform plan -var-file="${SECRETS}" 
+terraform apply -var-file="${SECRETS}" -auto-approve
 cd ..
 
 # Print connection information for the local environment
